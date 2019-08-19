@@ -13,10 +13,10 @@
   },
   "keywords": ["typescript"],
   "devDependencies": {
-    "awesome-typescript-loader": "3.4.1",
-    "typescript": "2.6.2",
-    "webpack": "3.10.0",
-    "webpack-dev-server": "2.9.7"
+    "awesome-typescript-loader": "5.2.1",
+    "typescript": "3.5.3",
+    "webpack": "4.39.2",
+    "webpack-dev-server": "3.8.0"
   },
   "author": "Ultimate Angular",
   "license": "MIT",
