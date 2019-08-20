@@ -68,23 +68,49 @@
 // console.log(newToppings);
 // console.log(allToppings);
 
+// const pizza = {
+//     name: 'Pepperoni'
+// };
+
+// const toppings = ['pepperoni'];
+
+// const order = {
+//     ...pizza,
+//     toppings
+// }
+
+// console.log(order)
+
+// console.log({ ...order })
+
+// console.log(Object.assign({}, pizza, { toppings }));
+
+// const spreadOrder = { ...pizza, toppings };
+
+// console.log(spreadOrder);
+
 const pizza = {
-    name: 'Pepperoni'
-};
-
-const toppings = ['pepperoni'];
-
-const order = {
-    ...pizza,
-    toppings
+    name: 'Pepperoni',
+    toppings: ['pepperoni']
 }
 
-console.log(order)
+function order({ name: pizzaName, toppings: pizzaToppings }: any) {
+    console.log(pizzaName, pizzaToppings);
+    return { pizzaName, pizzaToppings }
+}
 
-console.log({ ...order })
+const { pizzaName, pizzaToppings } = order(pizza);
 
-console.log(Object.assign({}, pizza, { toppings }));
+console.log(pizzaName, pizzaToppings);
 
-const spreadOrder = { ...pizza, toppings };
+const toppings = ['pepperoni', 'bacon', 'chili'];
 
-console.log(spreadOrder);
+const [first, second, third] = toppings;
+
+console.log(first, second, third);
+
+function logToppings([first, second, third]: any) {
+    console.log(first, second, third);
+}
+
+console.log(toppings);
