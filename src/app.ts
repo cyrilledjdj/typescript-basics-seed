@@ -51,9 +51,20 @@
 // }
 // console.log(sumAll([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
-function sumAll(message: string, ...arr: number[]) {
-    console.log(arguments);
-    console.log(message);
-    return arr.reduce((prev, next) => prev + next);
-}
-console.log(sumAll('Yo!', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+// function sumAll(message: string, ...arr: number[]) {
+//     console.log(arguments);
+//     console.log(message);
+//     return arr.reduce((prev, next) => prev + next);
+// }
+// console.log(sumAll('Yo!', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+
+const toppings = ['bacon', 'chili'];
+
+const newToppings = ['pepperoni'];
+
+const allToppings = ['pineapple', ...toppings, ...newToppings, 'mushroom'];
+
+console.log(toppings);
+console.log(newToppings);
+console.log(allToppings);
