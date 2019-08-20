@@ -58,13 +58,33 @@
 // }
 // console.log(sumAll('Yo!', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
+// const toppings = ['bacon', 'chili'];
 
-const toppings = ['bacon', 'chili'];
+// const newToppings = ['pepperoni'];
 
-const newToppings = ['pepperoni'];
+// const allToppings = ['pineapple', ...toppings, ...newToppings, 'mushroom'];
 
-const allToppings = ['pineapple', ...toppings, ...newToppings, 'mushroom'];
+// console.log(toppings);
+// console.log(newToppings);
+// console.log(allToppings);
 
-console.log(toppings);
-console.log(newToppings);
-console.log(allToppings);
+const pizza = {
+    name: 'Pepperoni'
+};
+
+const toppings = ['pepperoni'];
+
+const order = {
+    ...pizza,
+    toppings
+}
+
+console.log(order)
+
+console.log({ ...order })
+
+console.log(Object.assign({}, pizza, { toppings }));
+
+const spreadOrder = { ...pizza, toppings };
+
+console.log(spreadOrder);
