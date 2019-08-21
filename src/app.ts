@@ -145,14 +145,19 @@
 
 // coupon = false;
 
-const pizzas: number = 5;
+// const pizzas: number = 5;
 
-function offerDiscount(orders: number): boolean {
-    return orders >= 3;
-}
+// function offerDiscount(orders: number): boolean {
+//     return orders >= 3;
+// }
 
-if (offerDiscount(pizzas)) {
-    console.log(`You're entitled to a discount!`)
-} else {
-    console.log(`Order more pizzas for discount.`);
-}
+// if (offerDiscount(pizzas)) {
+//     console.log(`You're entitled to a discount!`)
+// } else {
+//     console.log(`Order more pizzas for discount.`);
+// }
+
+let implicitCoupon = 'pizza25',
+    explicitCoupon: string = 'pizza25';
+
+console.log(implicitCoupon, explicitCoupon)
