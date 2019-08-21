@@ -116,11 +116,23 @@
 // console.log(toppings);
 
 
-const pizzaCost: number = 10,
-    pizzaToppings: number = 2;
+// const pizzaCost: number = 10,
+//     pizzaToppings: number = 2;
 
-function calculatePrice(cost: number, toppings: number): number {
-    return cost + 1.5 * toppings;
+// function calculatePrice(cost: number, toppings: number): number {
+//     return cost + 1.5 * toppings;
+// }
+
+// console.log(`Pizza cost: ${calculatePrice(pizzaCost, pizzaToppings)}`);
+
+const coupon = 'pizza25';
+
+function normalizeCoupon(code: string): string {
+    return code.toUpperCase();
 }
+console.log(normalizeCoupon('hello'));
 
-console.log(`Pizza cost: ${calculatePrice(pizzaCost, pizzaToppings)}`);
+
+const couponMessage: string = `Final coupon is ${normalizeCoupon(coupon)}`;
+
+console.log(couponMessage);
