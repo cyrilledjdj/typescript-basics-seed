@@ -89,28 +89,38 @@
 
 // console.log(spreadOrder);
 
-const pizza = {
-    name: 'Pepperoni',
-    toppings: ['pepperoni']
+// const pizza = {
+//     name: 'Pepperoni',
+//     toppings: ['pepperoni']
+// }
+
+// function order({ name: pizzaName, toppings: pizzaToppings }: any) {
+//     console.log(pizzaName, pizzaToppings);
+//     return { pizzaName, pizzaToppings }
+// }
+
+// const { pizzaName, pizzaToppings } = order(pizza);
+
+// console.log(pizzaName, pizzaToppings);
+
+// const toppings = ['pepperoni', 'bacon', 'chili'];
+
+// const [first, second, third] = toppings;
+
+// console.log(first, second, third);
+
+// function logToppings([first, second, third]: any) {
+//     console.log(first, second, third);
+// }
+
+// console.log(toppings);
+
+
+const pizzaCost: number = 10,
+    pizzaToppings: number = 2;
+
+function calculatePrice(cost: number, toppings: number): number {
+    return cost + 1.5 * toppings;
 }
 
-function order({ name: pizzaName, toppings: pizzaToppings }: any) {
-    console.log(pizzaName, pizzaToppings);
-    return { pizzaName, pizzaToppings }
-}
-
-const { pizzaName, pizzaToppings } = order(pizza);
-
-console.log(pizzaName, pizzaToppings);
-
-const toppings = ['pepperoni', 'bacon', 'chili'];
-
-const [first, second, third] = toppings;
-
-console.log(first, second, third);
-
-function logToppings([first, second, third]: any) {
-    console.log(first, second, third);
-}
-
-console.log(toppings);
+console.log(`Pizza cost: ${calculatePrice(pizzaCost, pizzaToppings)}`);
