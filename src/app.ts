@@ -226,8 +226,18 @@
 // console.log('Total sum:', sumOrder(25, 4))
 
 
-let sumOrder: (price: number, quantity?: number) => number =
-    (price, quantity = 1) => price * quantity;
+// let sumOrder: (price: number, quantity?: number) => number =
+//     (price, quantity = 1) => price * quantity;
 
-console.log('Total sum:', sumOrder(25))
-console.log('Total sum:', sumOrder(25, 4))
+// console.log('Total sum:', sumOrder(25))
+// console.log('Total sum:', sumOrder(25, 4))
+
+let pizza: { name: string; price: number; getName(): string } = {
+    name: 'Plain old pepperoni',
+    price: 20,
+    getName() {
+        return this.name;
+    }
+};
+
+console.log(pizza.getName());
