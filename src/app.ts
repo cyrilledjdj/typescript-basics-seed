@@ -192,12 +192,30 @@
 
 // console.log(coupon)
 
-let pizzaSize: number = 1;
+// let pizzaSize: number = 1;
 
-function selectSize(size: 1 | 2 | 3): void {
-    pizzaSize = size;
+// function selectSize(size: 1 | 2 | 3): void {
+//     pizzaSize = size;
+// }
+
+// selectSize(2);
+
+// console.log(`Pizza size: ${pizzaSize}`)
+
+function sumOrder(price: number, quantity: number): number {
+    return price * quantity;
 }
 
-selectSize(2);
+let sumOrder2: Function = (price: number, quantity: number) => {
+    return price * quantity;
+}
 
-console.log(`Pizza size: ${pizzaSize}`)
+const sumOrder3 = (price: number, quantity: number): number => price * quantity;
+
+let sumOrder4: (price: number, quantity: number) => number =
+    (price, quantity) => price * quantity;
+
+console.log(sumOrder(25, 2))
+console.log(sumOrder2(25, 2))
+console.log(sumOrder3(25, 2))
+console.log(sumOrder4(25, 2))
