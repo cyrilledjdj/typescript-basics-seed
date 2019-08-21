@@ -322,6 +322,30 @@
 
 // console.log(pizza.getAvailableSizes());
 // console.log(pizza);
+
+class Sizes {
+    constructor(public sizes: string[]) { }
+
+    set availableSizes(sizes: string[]) {
+        console.log('Invoked set')
+        this.sizes = sizes;
+    }
+    get availableSizes(): string[] {
+        console.log('Invoked get')
+        return this.sizes;
+    }
+
+    static get hello() {
+        return 'Hello';
+    }
+}
+
+console.log(Sizes.hello);
+
+const sizes = new Sizes(['small', 'medium', 'large'])
+console.log(sizes.availableSizes);
+sizes.availableSizes = ['medium', 'large']
+console.log(sizes.availableSizes);
 class Pizza {
     toppings: string[] = [];
     constructor(public readonly name: string) { }
