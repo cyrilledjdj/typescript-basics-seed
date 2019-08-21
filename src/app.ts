@@ -164,7 +164,7 @@
 
 let selectedTopping: string = 'pepperoni';
 
-function selectTopping(topping: string) {
+function selectTopping(topping: string): void {
     selectedTopping = topping;
 }
 
