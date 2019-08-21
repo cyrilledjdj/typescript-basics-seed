@@ -137,10 +137,22 @@
 
 // console.log(couponMessage);
 
-let coupon: any;
+// let coupon: any;
 
-coupon = 25;
+// coupon = 25;
 
-coupon = 'string';
+// coupon = 'string';
 
-coupon = false;
+// coupon = false;
+
+const pizzas: number = 5;
+
+function offerDiscount(orders: number): boolean {
+    return orders >= 3;
+}
+
+if (offerDiscount(pizzas)) {
+    console.log(`You're entitled to a discount!`)
+} else {
+    console.log(`Order more pizzas for discount.`);
+}
