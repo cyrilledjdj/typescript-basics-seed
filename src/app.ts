@@ -322,8 +322,10 @@
 
 // console.log(pizza.getAvailableSizes());
 // console.log(pizza);
-
-abstract class Sizes {
+interface SizesI {
+    availableSizes: string[]
+}
+abstract class Sizes implements SizesI {
     constructor(protected sizes: string[]) { }
 
     set availableSizes(sizes: string[]) {
@@ -338,7 +340,14 @@ abstract class Sizes {
     }
 }
 // new Sizes(['small'])
-class Pizza extends Sizes {
+
+interface PizzaI extends SizesI {
+    readonly name: string,
+    toppings: string[],
+    addTopping: (topping: string) => void;
+    updateSizes: (sizes: string[]) => void;
+}
+class Pizza extends Sizes implements PizzaI {
     toppings: string[] = [];
     constructor(public readonly name: string, sizes: string[]) {
         super(sizes);
