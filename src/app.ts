@@ -174,8 +174,20 @@
 
 // console.log(selectedTopping);
 
-function orderError(error: string): never {
-    throw new Error(error);
+// function orderError(error: string): never {
+//     throw new Error(error);
+// }
+
+// orderError('Something went wrong!');
+
+let coupon: string | null | undefined = 'pizza25';
+
+function removeCoupon(): void {
+    coupon = null;
 }
 
-orderError('Something went wrong!');
+console.log(coupon);
+
+removeCoupon();
+
+console.log(coupon)
