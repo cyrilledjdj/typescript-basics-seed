@@ -220,7 +220,14 @@
 // console.log(sumOrder3(25, 2))
 // console.log(sumOrder4(25, 2))
 
-const sumOrder = (price: number, quantity?: number): number => price * (quantity || 1);
+// const sumOrder = (price: number, quantity?: number): number => price * (quantity || 1);
+
+// console.log('Total sum:', sumOrder(25))
+// console.log('Total sum:', sumOrder(25, 4))
+
+
+let sumOrder: (price: number, quantity?: number) => number =
+    (price, quantity = 1) => price * quantity;
 
 console.log('Total sum:', sumOrder(25))
 console.log('Total sum:', sumOrder(25, 4))
