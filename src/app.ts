@@ -255,8 +255,25 @@
 
 // console.log(toppings)
 
-let pizza: [string, number, boolean];
+// let pizza: [string, number, boolean];
 
-pizza = ['Pepperoni', 20, false];
+// pizza = ['Pepperoni', 20, false];
 
-console.log(pizza)
+// console.log(pizza)
+type Size = 'small' | 'medium' | 'large';
+type Callback = (size: Size) => void;
+
+let pizzaSize: Size = 'small';
+
+const selectSize: Callback = (x) => {
+    pizzaSize = x;
+}
+
+console.log(pizzaSize)
+
+selectSize('large');
+
+console.log(pizzaSize)
+selectSize('medium');
+
+console.log(pizzaSize)
