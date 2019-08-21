@@ -232,12 +232,25 @@
 // console.log('Total sum:', sumOrder(25))
 // console.log('Total sum:', sumOrder(25, 4))
 
-let pizza: { name: string; price: number; getName(): string } = {
-    name: 'Plain old pepperoni',
-    price: 20,
-    getName() {
-        return this.name;
-    }
-};
+// let pizza: { name: string; price: number; getName(): string } = {
+//     name: 'Plain old pepperoni',
+//     price: 20,
+//     getName() {
+//         return this.name;
+//     }
+// };
 
-console.log(pizza.getName());
+// console.log(pizza.getName());
+
+let sizes: number[];
+
+sizes = [1, 2, 3];
+
+
+console.log(sizes)
+
+let toppings: Array<string>;
+
+toppings = ['pepperoni', 'tomato', 'bacon'];
+
+console.log(toppings)
