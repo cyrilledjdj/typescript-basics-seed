@@ -162,14 +162,20 @@
 
 // console.log(implicitCoupon, explicitCoupon)
 
-let selectedTopping: string = 'pepperoni';
+// let selectedTopping: string = 'pepperoni';
 
-function selectTopping(topping: string): void {
-    selectedTopping = topping;
+// function selectTopping(topping: string): void {
+//     selectedTopping = topping;
+// }
+
+// console.log(selectedTopping);
+
+// selectTopping('bacon');
+
+// console.log(selectedTopping);
+
+function orderError(error: string): never {
+    throw new Error(error);
 }
 
-console.log(selectedTopping);
-
-selectTopping('bacon');
-
-console.log(selectedTopping);
+orderError('Something went wrong!');
