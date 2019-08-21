@@ -242,15 +242,21 @@
 
 // console.log(pizza.getName());
 
-let sizes: number[];
+// let sizes: number[];
 
-sizes = [1, 2, 3];
+// sizes = [1, 2, 3];
 
 
-console.log(sizes)
+// console.log(sizes)
 
-let toppings: Array<string>;
+// let toppings: Array<string>;
 
-toppings = ['pepperoni', 'tomato', 'bacon'];
+// toppings = ['pepperoni', 'tomato', 'bacon'];
 
-console.log(toppings)
+// console.log(toppings)
+
+let pizza: [string, number, boolean];
+
+pizza = ['Pepperoni', 20, false];
+
+console.log(pizza)
