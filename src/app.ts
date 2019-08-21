@@ -202,20 +202,25 @@
 
 // console.log(`Pizza size: ${pizzaSize}`)
 
-function sumOrder(price: number, quantity: number): number {
-    return price * quantity;
-}
+// function sumOrder(price: number, quantity: number): number {
+//     return price * quantity;
+// }
 
-let sumOrder2: Function = (price: number, quantity: number) => {
-    return price * quantity;
-}
+// let sumOrder2: Function = (price: number, quantity: number) => {
+//     return price * quantity;
+// }
 
-const sumOrder3 = (price: number, quantity: number): number => price * quantity;
+// const sumOrder3 = (price: number, quantity: number): number => price * quantity;
 
-let sumOrder4: (price: number, quantity: number) => number =
-    (price, quantity) => price * quantity;
+// let sumOrder4: (price: number, quantity: number) => number =
+//     (price, quantity) => price * quantity;
 
-console.log(sumOrder(25, 2))
-console.log(sumOrder2(25, 2))
-console.log(sumOrder3(25, 2))
-console.log(sumOrder4(25, 2))
+// console.log(sumOrder(25, 2))
+// console.log(sumOrder2(25, 2))
+// console.log(sumOrder3(25, 2))
+// console.log(sumOrder4(25, 2))
+
+const sumOrder = (price: number, quantity?: number): number => price * (quantity || 1);
+
+console.log('Total sum:', sumOrder(25))
+console.log('Total sum:', sumOrder(25, 4))
