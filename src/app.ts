@@ -323,7 +323,7 @@
 // console.log(pizza.getAvailableSizes());
 // console.log(pizza);
 
-class Sizes {
+abstract class Sizes {
     constructor(public sizes: string[]) { }
 
     set availableSizes(sizes: string[]) {
@@ -337,6 +337,7 @@ class Sizes {
         return 'Hello';
     }
 }
+// new Sizes(['small'])
 class Pizza extends Sizes {
     toppings: string[] = [];
     constructor(public readonly name: string, public sizes: string[]) {
