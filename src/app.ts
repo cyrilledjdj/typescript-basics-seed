@@ -157,7 +157,19 @@
 //     console.log(`Order more pizzas for discount.`);
 // }
 
-let implicitCoupon = 'pizza25',
-    explicitCoupon: string = 'pizza25';
+// let implicitCoupon = 'pizza25',
+//     explicitCoupon: string = 'pizza25';
 
-console.log(implicitCoupon, explicitCoupon)
+// console.log(implicitCoupon, explicitCoupon)
+
+let selectedTopping: string = 'pepperoni';
+
+function selectTopping(topping: string) {
+    selectedTopping = topping;
+}
+
+console.log(selectedTopping);
+
+selectTopping('bacon');
+
+console.log(selectedTopping);
