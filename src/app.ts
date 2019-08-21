@@ -180,14 +180,24 @@
 
 // orderError('Something went wrong!');
 
-let coupon: string | null | undefined = 'pizza25';
+// let coupon: string | null | undefined = 'pizza25';
 
-function removeCoupon(): void {
-    coupon = null;
+// function removeCoupon(): void {
+//     coupon = null;
+// }
+
+// console.log(coupon);
+
+// removeCoupon();
+
+// console.log(coupon)
+
+let pizzaSize: number = 1;
+
+function selectSize(size: 1 | 2 | 3): void {
+    pizzaSize = size;
 }
 
-console.log(coupon);
+selectSize(2);
 
-removeCoupon();
-
-console.log(coupon)
+console.log(`Pizza size: ${pizzaSize}`)
