@@ -260,20 +260,34 @@
 // pizza = ['Pepperoni', 20, false];
 
 // console.log(pizza)
-type Size = 'small' | 'medium' | 'large';
-type Callback = (size: Size) => void;
+// type Size = 'small' | 'medium' | 'large';
+// type Callback = (size: Size) => void;
 
-let pizzaSize: Size = 'small';
+// let pizzaSize: Size = 'small';
 
-const selectSize: Callback = (x) => {
-    pizzaSize = x;
+// const selectSize: Callback = (x) => {
+//     pizzaSize = x;
+// }
+
+// console.log(pizzaSize)
+
+// selectSize('large');
+
+// console.log(pizzaSize)
+// selectSize('medium');
+
+// console.log(pizzaSize)
+
+type Pizza = { name: string; toppings: number }
+
+const pizza: Pizza = { name: 'Blazing Inferno', toppings: 6 };
+console.log(pizza);
+const serialized = JSON.stringify(pizza);
+console.log(serialized);
+
+function getNameFromJSON(obj: string): string {
+    // return (JSON.parse(obj) as Pizza).name;
+    return (<Pizza>JSON.parse(obj)).name
 }
 
-console.log(pizzaSize)
-
-selectSize('large');
-
-console.log(pizzaSize)
-selectSize('medium');
-
-console.log(pizzaSize)
+console.log(getNameFromJSON(serialized))
