@@ -278,16 +278,31 @@
 
 // console.log(pizzaSize)
 
-type Pizza = { name: string; toppings: number }
+// type Pizza = { name: string; toppings: number }
 
-const pizza: Pizza = { name: 'Blazing Inferno', toppings: 6 };
-console.log(pizza);
-const serialized = JSON.stringify(pizza);
-console.log(serialized);
+// const pizza: Pizza = { name: 'Blazing Inferno', toppings: 6 };
+// console.log(pizza);
+// const serialized = JSON.stringify(pizza);
+// console.log(serialized);
 
-function getNameFromJSON(obj: string): string {
-    // return (JSON.parse(obj) as Pizza).name;
-    return (<Pizza>JSON.parse(obj)).name
+// function getNameFromJSON(obj: string): string {
+//     // return (JSON.parse(obj) as Pizza).name;
+//     return (<Pizza>JSON.parse(obj)).name
+// }
+
+// console.log(getNameFromJSON(serialized))
+
+interface Pizza {
+    name: string,
+    sizes: string[]
 }
 
-console.log(getNameFromJSON(serialized))
+let pizza: Pizza;
+
+function createPizza(name: string, sizes: string[]): Pizza {
+    return { name, sizes }
+}
+
+pizza = createPizza('Pepperoni', ['small', 'medium']);
+
+console.log(pizza);
