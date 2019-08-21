@@ -125,14 +125,22 @@
 
 // console.log(`Pizza cost: ${calculatePrice(pizzaCost, pizzaToppings)}`);
 
-const coupon = 'pizza25';
+// const coupon = 'pizza25';
 
-function normalizeCoupon(code: string): string {
-    return code.toUpperCase();
-}
-console.log(normalizeCoupon('hello'));
+// function normalizeCoupon(code: string): string {
+//     return code.toUpperCase();
+// }
+// console.log(normalizeCoupon('hello'));
 
 
-const couponMessage: string = `Final coupon is ${normalizeCoupon(coupon)}`;
+// const couponMessage: string = `Final coupon is ${normalizeCoupon(coupon)}`;
 
-console.log(couponMessage);
+// console.log(couponMessage);
+
+let coupon: any;
+
+coupon = 25;
+
+coupon = 'string';
+
+coupon = false;
