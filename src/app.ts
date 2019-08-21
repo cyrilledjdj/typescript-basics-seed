@@ -323,16 +323,10 @@
 // console.log(pizza.getAvailableSizes());
 // console.log(pizza);
 class Pizza {
-    name: string;
     toppings: string[] = [];
-    constructor(name: string) {
-        this.name = name;
-    }
+    constructor(private name: string) { }
     addTopping(topping: string): void {
         this.toppings.push(topping)
-    }
-    toString(): string {
-        return `You really want this?`;
     }
 }
 
