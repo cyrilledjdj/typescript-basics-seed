@@ -292,15 +292,14 @@
 
 // console.log(getNameFromJSON(serialized))
 
-interface Pizza {
-    name: string,
+interface Sizes {
     sizes: string[],
+}
+interface Pizza extends Sizes {
+    name: string,
     getAvailableSizes: () => string[],
 }
 
-interface Pizzas {
-    data: Pizza[]
-}
 
 let pizza: Pizza;
 
