@@ -292,33 +292,50 @@
 
 // console.log(getNameFromJSON(serialized))
 
-interface Sizes {
-    sizes: string[],
-}
-interface Pizza extends Sizes {
-    name: string,
-    toppings?: number;
-    getAvailableSizes: () => string[],
-    [key: number]: string,
-    [key: string]: any,
-}
+// interface Sizes {
+//     sizes: string[],
+// }
+// interface Pizza extends Sizes {
+//     name: string,
+//     toppings?: number;
+//     getAvailableSizes: () => string[],
+//     [key: number]: string,
+//     [key: string]: any,
+// }
 
 
-let pizza: Pizza;
+// let pizza: Pizza;
 
-function createPizza(name: string, sizes: string[]): Pizza {
-    return {
-        name, sizes, getAvailableSizes() {
-            return this.sizes;
-        }
+// function createPizza(name: string, sizes: string[]): Pizza {
+//     return {
+//         name, sizes, getAvailableSizes() {
+//             return this.sizes;
+//         }
+//     }
+// }
+
+// pizza = createPizza('Pepperoni', ['small', 'medium']);
+
+// pizza.toppings = 1;
+// pizza['hello'] = 3;
+// pizza[3] = 'fine';
+
+// console.log(pizza.getAvailableSizes());
+// console.log(pizza);
+class Pizza {
+    name: string;
+    toppings: string[] = [];
+    constructor(name: string) {
+        this.name = name;
+    }
+    addTopping(topping: string): void {
+        this.toppings.push(topping)
+    }
+    toString(): string {
+        return `You really want this?`;
     }
 }
 
-pizza = createPizza('Pepperoni', ['small', 'medium']);
-
-pizza.toppings = 1;
-pizza['hello'] = 3;
-pizza[3] = 'fine';
-
-console.log(pizza.getAvailableSizes());
-console.log(pizza);
+const pizza = new Pizza('Pepperoni');
+pizza.addTopping('pepperoni');
+console.log(pizza)
