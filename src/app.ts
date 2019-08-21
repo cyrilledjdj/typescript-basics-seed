@@ -297,6 +297,10 @@ interface Pizza {
     sizes: string[]
 }
 
+interface Pizzas {
+    data: Pizza[]
+}
+
 let pizza: Pizza;
 
 function createPizza(name: string, sizes: string[]): Pizza {
