@@ -322,48 +322,58 @@
 
 // console.log(pizza.getAvailableSizes());
 // console.log(pizza);
-interface SizesI {
-    availableSizes: string[]
+// interface SizesI {
+//     availableSizes: string[]
+// }
+// abstract class Sizes implements SizesI {
+//     constructor(protected sizes: string[]) { }
+
+//     set availableSizes(sizes: string[]) {
+//         this.sizes = sizes;
+//     }
+//     get availableSizes(): string[] {
+//         return this.sizes;
+//     }
+
+//     static get hello() {
+//         return 'Hello';
+//     }
+// }
+// // new Sizes(['small'])
+
+// interface PizzaI extends SizesI {
+//     readonly name: string,
+//     toppings: string[],
+//     addTopping: (topping: string) => void;
+//     updateSizes: (sizes: string[]) => void;
+// }
+// class Pizza extends Sizes implements PizzaI {
+//     toppings: string[] = [];
+//     constructor(public readonly name: string, sizes: string[]) {
+//         super(sizes);
+//     }
+//     addTopping(topping: string): void {
+//         this.toppings.push(topping)
+//     }
+
+//     public updateSizes(sizes: string[]) {
+//         this.sizes = sizes;
+//     }
+// }
+
+// const pizza = new Pizza('Pepperoni', ['small', 'medium']);
+// pizza.addTopping('pepperoni');
+// // console.log(pizza.sizes)
+// console.log(pizza.availableSizes)
+// pizza.updateSizes(['large'])
+// console.log(pizza.availableSizes)
+
+class Coupon {
+    static allowed = ['Pepperoni', 'Blazing Inferno']
+    static create(percentage: number) {
+        return `PIZZA_RESTAURANT_${percentage}`;
+    }
 }
-abstract class Sizes implements SizesI {
-    constructor(protected sizes: string[]) { }
 
-    set availableSizes(sizes: string[]) {
-        this.sizes = sizes;
-    }
-    get availableSizes(): string[] {
-        return this.sizes;
-    }
-
-    static get hello() {
-        return 'Hello';
-    }
-}
-// new Sizes(['small'])
-
-interface PizzaI extends SizesI {
-    readonly name: string,
-    toppings: string[],
-    addTopping: (topping: string) => void;
-    updateSizes: (sizes: string[]) => void;
-}
-class Pizza extends Sizes implements PizzaI {
-    toppings: string[] = [];
-    constructor(public readonly name: string, sizes: string[]) {
-        super(sizes);
-    }
-    addTopping(topping: string): void {
-        this.toppings.push(topping)
-    }
-
-    public updateSizes(sizes: string[]) {
-        this.sizes = sizes;
-    }
-}
-
-const pizza = new Pizza('Pepperoni', ['small', 'medium']);
-pizza.addTopping('pepperoni');
-// console.log(pizza.sizes)
-console.log(pizza.availableSizes)
-pizza.updateSizes(['large'])
-console.log(pizza.availableSizes)
+console.log(Coupon.allowed);
+console.log(Coupon.create(20))
